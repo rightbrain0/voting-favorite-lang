@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>vote !!</title>
+</head>
+
+<body>
+
+<h3>Which  Is Your Favorite Language ?</h3>
+
+<input type="checkbox" id="pycheck"  > Python <br><br>
+<input type="checkbox" id="jscheck"  > Javascript <br><br>
+<input type="checkbox" id="gocheck"  > GoLang <br><br><br>
+
+<input type="submit" value="Vote !!" onclick="countingVote()"><br><br>
+
+<div id="showpy">python has got <span id="pyvote">0 </span> vote(s)</div><br>
+<div id="showjs">javascript has got <span id="jsvote">0 </span> vote(s)</div><br>
+<div id="showgo">golang has got <span id="govote">0 </span> vote(s)</div><br>
+
+
+
+<script type="text/javascript">
+	
+	var py= 0 ;
+	var js= 0 ;
+	var go= 0 ;
+	 
+	function countingVote(){
+		
+		var pychecked = document.getElementById('pycheck').checked ;
+		var jschecked = document.getElementById('jscheck').checked ; 
+		var gochecked = document.getElementById('gocheck').checked ;
+
+			if(pychecked){
+		    	py = py + 1;
+		    	document.getElementById('pyvote').innerHTML = py ;
+		    	
+			}
+
+			
+
+			if(jschecked){
+		    	js = js + 1;
+		    	document.getElementById('jsvote').innerHTML = js ;
+		    	
+			}
+			
+
+			if(gochecked){
+		    	go = go + 1;
+		    	document.getElementById('govote').innerHTML = go ;
+		    	
+			}
+			
+
+			if(pychecked === false && jschecked === false  && gochecked === false){
+				alert("You Have TO Check Atleast One") ;
+			}
+			
+	
+	}
+
+</script>
+
+</body>
+</html>
